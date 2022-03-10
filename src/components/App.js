@@ -33,8 +33,11 @@ function App() {
 
   const history = useHistory();
 
+  const token = localStorage.getItem("jwt");
+
   React.useEffect(() => {
-    Promise.all([api.getUserInfo(), api.getInitialCards()])
+    if (token) {
+      return Promise.all([api.getUserInfo(), api.getInitialCards()])
     .then(([user, cards]) => {
       setCurrentUser(user);
       setCards(cards);
@@ -42,10 +45,10 @@ function App() {
     .catch((err) => {
       console.log(err);
     });
-  }, []);
+  }
+ },[]);
 
   React.useEffect(() => {
-    const token = localStorage.getItem("jwt");
     if (token) {
       return getToken(token)
       .then((res) => {
@@ -97,9 +100,9 @@ function App() {
         setMessageText("Что-то пошло не так! Попробуйте ещё раз.");
       });
   }
-
+ 
   React.useEffect(() => {
-    if (isLoggedIn) {
+    if (token) {
       history.push('/');
     }
   }, [history, isLoggedIn]);
@@ -133,7 +136,7 @@ function App() {
     api
       .deleteCard(card._id)
       .then(() => {
-        setCards(cards.filter(item => item._id !== card._id));
+        setCards((cards) => cards.filter((item) => item._id !== card._id));
       })
       .catch((err) => {
         console.log(err);

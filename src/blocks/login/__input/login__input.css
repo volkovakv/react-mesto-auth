@@ -10,3 +10,9 @@
     min-width: 358px;
     font-family: Inter, Arial, sans-serif;
 }
+
+.login__input:-webkit-autofill {
+    box-shadow: inset 0 0 0 50px #000 !important; /* Цвет фона */
+   -webkit-text-fill-color: #CCCCCC !important; /* цвет текста */
+   color: #CCCCCC !important; /* цвет текста */
+  }
