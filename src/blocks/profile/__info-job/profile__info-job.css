@@ -1,0 +1,37 @@
+.profile__info-job {
+    font-family: Inter, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.22;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 100%;
+    grid-area: job;
+}
+
+@media screen and (max-width: 900px) {
+    .profile__info-job {
+        font-size: 14px;
+        line-height: 1.21;
+        margin-top: 14px;
+    }
+}
+
+@media screen and (max-width: 690px) {
+    .profile__info-job {
+        margin-left: 14px;
+        text-align: center;
+    }
+}
+
+
+@media screen and (max-width: 450px) {
+    .profile__info-job {
+        max-width: 282px;
+    }
+}

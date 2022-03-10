@@ -1,0 +1,12 @@
+.login__input {
+    margin: 0 0 23px;
+    outline: none;
+    border: none;
+    background: none;
+    border-bottom: 2px solid #ccc;
+    color: #fff;
+    font-size: 14px;
+    line-height: 30px;
+    min-width: 358px;
+    font-family: Inter, Arial, sans-serif;
+}

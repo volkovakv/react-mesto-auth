@@ -1,0 +1,33 @@
+.profile__bio {
+    display: grid;
+    grid-template-columns: 294px 42px;
+    row-gap: 16px;
+    grid-template-areas:
+    "name editbutton"
+    "job job";
+    margin: 0;
+    padding: 0;
+    align-items: flex-end;
+    max-width: 100%;
+    max-height: 100%;
+    border: none;
+}
+
+@media screen and (max-width: 920px) {
+    .profile__bio {
+        grid-template-columns: 198px 36px;
+        grid-template-rows: 26px 14px;
+        row-gap: 14px;
+    }
+}
+
+@media screen and (max-width: 690px) {
+    .profile__bio {
+        grid-template-areas:
+        "name editbutton"
+        "job .";
+        margin-left: 14px;
+        margin-bottom: 32px;
+        justify-items: center;
+    }
+}

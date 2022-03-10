@@ -1,0 +1,8 @@
+.popup__status {
+    box-sizing: border-box;
+    position: relative;
+    min-width: 430px;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 19px 36px;
+}

@@ -1,0 +1,24 @@
+.profile__avatar-edit {
+    width: 120px;
+    height: 120px;
+    margin: 0 30px 0 0;
+    padding: 0;
+    border: none;
+    border-radius: 100px;
+    z-index: 1;
+    background: transparent;
+    background-color: rgba(0, 0, 0, 0.8);
+    background-image: url(../../../images/pen.png);
+    background-position: center;
+    background-size: 26px;
+    background-repeat: no-repeat;
+    outline: 1px solid black;
+    transition: background-color 0.5s linear;
+  }
+
+  
+  @media screen and (max-width: 690px) {
+    .profile__avatar-edit  {
+      margin: 0 0 27px 0;
+    }
+  }
